@@ -1,0 +1,17 @@
+.footer {
+  height: 150px;
+  padding: 20px 0;
+}
+
+.footer a {
+  color: white;
+  transition: 0.5s;
+}
+
+.footer ul {
+    font-size: 3em;
+}
+
+.footer a:hover {
+  color: yellow;
+}
