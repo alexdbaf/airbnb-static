@@ -1,0 +1,26 @@
+<!-- source/flats/show.html.erb -->
+
+<!-- Read from data.flats with owner's name as key -->
+<% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path flat.picture%>');">
+  <div class="banner-content">
+    <h1><%= flat.city %></h1>
+    <p>This <%= flat.summary.downcase %> is your new home</p>
+    <a href="#description"class="btn btn-primary btn-lg">Discover it</a>
+  </div>
+</div>
+<div id="description">
+  <div class="flat">
+    <div class="owner-info">
+      <%= image_tag flat.owner_picture, class: "img-circle" %>
+      <h2><%= flat.owner_name %></h2>
+    </div>
+    <div class="flat-info">
+    <h2>About this flat</h2>
+      <p> This room is <%= "not" if !flat.redproximity%> close to the red neighbourhood.</p>
+      <p> This room does <%= "not" if !flat.wifi %> have the wifi.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.flat {
+  display: flex;
+  justify-content: space-around;
+}
+
+.owner-info {
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.flat-info {
+  margin: 20px 20px;
+  padding: 10px 10px;
+  background: #EFEFEF;
+  // box-shadow: 0 1px 3px;
+  border-radius: 5px;
+  p {
+    font-size: 1.5em;
+    color: #8F8F8F;
+  }
+}
+
